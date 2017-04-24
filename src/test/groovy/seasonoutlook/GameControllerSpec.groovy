@@ -13,7 +13,9 @@ class GameControllerSpec extends Specification {
                    location:"location",
                    stadium:"stadium",
                    homeTeam: [new Team()],
-                   awayTeam: [new Team()]]
+                   awayTeam: [new Team()],
+                   homeTeamWinRecord: 3,
+                   awayTeamWinRecord: 4]
     }
 
     void "Test the index action returns the correct model"() {

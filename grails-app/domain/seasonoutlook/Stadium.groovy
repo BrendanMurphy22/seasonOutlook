@@ -7,6 +7,7 @@ class Stadium {
     Date yearBuilt
     Integer capacity
     Team homeTeam
+    String interestingFact
 
     static constraints = {
         name blank: false, nullable: false
@@ -15,5 +16,10 @@ class Stadium {
         yearBuilt blank: false, nullable: false
         capacity blank: false, nullable: false
         homeTeam blank: false, nullable: false
+        interestingFact blank: false, nullable: false
+    }
+
+    static mapping = {
+        interestingFact type: 'text'
     }
 }

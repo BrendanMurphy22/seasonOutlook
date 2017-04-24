@@ -14,7 +14,8 @@ class StadiumControllerSpec extends Specification {
                    architect: "architect",
                    yearBuilt: new Date(),
                    capacity: "27000",
-                    homeTeam: new Team()]
+                   homeTeam: new Team(),
+                   interestingFact: "something"]
     }
     void "Test the index action returns the correct model"() {
 
