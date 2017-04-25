@@ -15,8 +15,10 @@ class SeasonSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "test validation of nullable objects" () {
+        when:
+            Season s1 = new Season()
+        then:
+            !s1.validate()
     }
 }

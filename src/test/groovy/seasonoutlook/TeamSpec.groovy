@@ -15,8 +15,10 @@ class TeamSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "test validation of nullable objects" () {
+        when:
+            Team t1 = new Team()
+        then:
+            !t1.validate()
     }
 }

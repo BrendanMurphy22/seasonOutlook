@@ -15,8 +15,10 @@ class PlayerSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "test validation of nullable objects" () {
+        when:
+            Player p1 = new Player()
+        then:
+        !p1.validate()
     }
 }

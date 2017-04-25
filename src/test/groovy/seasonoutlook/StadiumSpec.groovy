@@ -15,8 +15,10 @@ class StadiumSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "test validation of nullable objects" () {
+        when:
+            Stadium st1 = new Stadium()
+        then:
+            !st1.validate()
     }
 }

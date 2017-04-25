@@ -15,8 +15,10 @@ class GameSpec extends Specification {
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "test validation of nullable objects" () {
+        when:
+            Game a1 = new Game()
+        then:
+            !a1.validate()
     }
 }
