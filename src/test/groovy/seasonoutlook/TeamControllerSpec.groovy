@@ -8,8 +8,10 @@ import spock.lang.*
 class TeamControllerSpec extends Specification {
 
     def populateValidParams(params) {
+
         assert params != null
-        params << [name:"name"]
+        params << [ name:"name",
+                    city:"boston"]
     }
 
     void "Test the index action returns the correct model"() {

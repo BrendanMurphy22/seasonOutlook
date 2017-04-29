@@ -10,8 +10,7 @@ class GameControllerSpec extends Specification {
     def populateValidParams(params) {
         assert params != null
         params << [date: new Date(),
-                   location:"location",
-                   stadium:"stadium",
+                   stadium:[new Stadium()],
                    homeTeam: [new Team()],
                    awayTeam: [new Team()],
                    homeTeamWinRecord: 3,

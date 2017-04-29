@@ -12,10 +12,11 @@ class StadiumControllerSpec extends Specification {
         params << [name:"name",
                    location: "location",
                    architect: "architect",
+                   surface: "grass",
                    yearBuilt: new Date(),
                    capacity: "27000",
-                   homeTeam: new Team(),
-                   interestingFact: "something"]
+                   interestingFact: "something",
+                   homeTeam: [new Team()]]
     }
     void "Test the index action returns the correct model"() {
 

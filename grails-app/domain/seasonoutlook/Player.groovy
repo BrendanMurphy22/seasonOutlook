@@ -7,10 +7,9 @@ class Player {
     String universityAttended
     Integer age
     Integer jerseyNum
-    Integer injuryRate
     Boolean underContract
     Integer contractVal
-    Integer contractLength
+    Date contractEnd
     Integer totalGamesPlayed
     Integer totalGamesMissed
 
@@ -24,10 +23,10 @@ class Player {
         universityAttended blank: false, nullable: true
         age maxSize: 150, blank: false, nullable: false
         jerseyNum  blank: false, nullable: false
-        injuryRate  blank: false, nullable: true
         underContract  blank: false, nullable: true
         contractVal  blank: false, nullable: true
-        contractLength  blank: false, nullable: true
+        contractEnd  blank: false, nullable: true
+        contractEnd  blank: false, nullable: true
         totalGamesPlayed  blank: false, nullable: true
         totalGamesMissed  blank: false, nullable: true
     }
