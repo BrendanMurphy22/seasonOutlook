@@ -12,13 +12,13 @@
         <td>Date</td>
         <td>Home Team</td>
         <td>Away Team</td>
-        <td>Stadium</td>
+        <td>Venue</td>
         <td>Away Team Wins</td>
         <td>Home Team Wins</td>
     </tr>
     <g:each in="${season.games}" var="game">
         <tr>
-            <td>${game.date}</td>
+            <td><g:formatDate format="MM/dd/yy HH a z" date="${game.date}"/></td>
             <td>${game.homeTeam.name}</td>
             <td>${game.awayTeam.name}</td>
             <td>${game.stadium.name}</td>

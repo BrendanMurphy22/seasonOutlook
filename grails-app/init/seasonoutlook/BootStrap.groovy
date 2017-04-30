@@ -156,7 +156,7 @@ class BootStrap {
                 homeTeamWinRecord: 2
         ).save()
         Game g4 = new Game(
-                date: Date.parse("MM/dd/yyyy", "10/01/2017"),
+                date: Date.parse("MM/dd/yy HH a z", "10/01/17 12 PM EST"),
                 stadium: gillete,
                 homeTeam: patriots,
                 awayTeam: panthers,
