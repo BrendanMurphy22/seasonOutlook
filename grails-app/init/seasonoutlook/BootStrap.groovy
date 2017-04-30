@@ -201,6 +201,80 @@ class BootStrap {
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/1947'),
                 totalGamesPlayed: 101,
                 totalGamesMissed: 12).save()
-        patriots.addToPlayers(ryanAllen)
+        Player dannyAmendola = new Player(
+                firstName:'Danny',
+                lastName:'Amendola',
+                position:'WR',
+                universityAttended: 'Texas Tech',
+                age: 31,
+                jerseyNum: 80,
+                underContract: true,
+                contractVal: 4500000,
+                contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
+                totalGamesPlayed: 98,
+                totalGamesMissed: 7).save()
+        Player davidAndrews = new Player(
+                firstName:'David',
+                lastName:'Andrews',
+                position:'C',
+                universityAttended: 'Clemson',
+                age: 24,
+                jerseyNum: 60,
+                underContract: true,
+                contractVal: 20000,
+                contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
+                totalGamesPlayed: 31,
+                totalGamesMissed: 2).save()
+        Player chrisBarker = new Player(
+                firstName:'Chris',
+                lastName:'Barker',
+                position:'OL',
+                universityAttended: 'Nevada',
+                age: 26,
+                jerseyNum: 64,
+                underContract: true,
+                contractVal: 2000000,
+                contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
+                totalGamesPlayed: 21,
+                totalGamesMissed: 1).save()
+        Player trevorBates = new Player(
+                firstName:'Trevor',
+                lastName:'Bates',
+                position:'LB',
+                universityAttended: 'Maine',
+                age: 23,
+                jerseyNum: 44,
+                underContract: true,
+                contractVal: 120000,
+                contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
+                totalGamesPlayed: 5,
+                totalGamesMissed: 0).save()
+        Player brandonBolden = new Player(
+                firstName:'Brandon',
+                lastName:'Bolden',
+                position:'RB',
+                universityAttended: 'Mississippi',
+                age: 27,
+                jerseyNum: 38,
+                underContract: true,
+                contractVal: 150000,
+                contractEnd: Date.parse('MM/dd/yyyy', '9/21/1947'),
+                totalGamesPlayed: 101,
+                totalGamesMissed: 12).save()
+        Player tomBrady  = new Player(
+                firstName:'Tom',
+                lastName:'Brady',
+                position:'QB',
+                universityAttended: 'Michigan',
+                age: 39,
+                jerseyNum: 12,
+                underContract: true,
+                contractVal: 2000000,
+                contractEnd: Date.parse('MM/dd/yyyy', '9/21/1947'),
+                totalGamesPlayed: 400,
+                totalGamesMissed: 12).save()
+
+        patriots.addToPlayers(ryanAllen).addToPlayers(dannyAmendola).addToPlayers(davidAndrews).addToPlayers(chrisBarker)
+                .addToPlayers(trevorBates).addToPlayers(brandonBolden).addToPlayers(tomBrady)
     }
 }

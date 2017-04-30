@@ -17,6 +17,7 @@ class PlayerController {
         respond player
     }
 
+
     def create() {
         respond new Player(params)
     }

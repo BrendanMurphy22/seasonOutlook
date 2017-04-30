@@ -9,7 +9,7 @@ class UrlMappings {
             }
         }
 
-        "/"(view:"/index")
+        "/"(uri: "/season/show/1")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

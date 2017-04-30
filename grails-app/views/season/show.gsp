@@ -7,6 +7,7 @@
 </head>
 <body>
 <h1>Patriots 2017 Season Outlook</h1>
+<a href="/team/roster/1">Patriots Roster</a>
 <table>
     <tr>
         <td>Date</td>
@@ -15,15 +16,17 @@
         <td>Venue</td>
         <td>Away Team Wins</td>
         <td>Home Team Wins</td>
+        <td>Win Probability</td>
     </tr>
     <g:each in="${season.games}" var="game">
         <tr>
             <td><g:formatDate format="MM/dd/yy HH a z" date="${game.date}"/></td>
-            <td>${game.homeTeam.name}</td>
-            <td>${game.awayTeam.name}</td>
-            <td>${game.stadium.name}</td>
+            <td>${game.awayTeam.city + ' ' + game.awayTeam.name}</td>
+            <td>${game.homeTeam.city + ' ' + game.homeTeam.name}</td>
+            <td><a href="/stadium/show/${game.stadium.id}">${game.stadium.name}</ahref></td>
             <td>${game.homeTeamWinRecord}</td>
             <td>${game.awayTeamWinRecord}</td>
+            <td>//TODO</td>
         </tr>
     </g:each>
 </table>

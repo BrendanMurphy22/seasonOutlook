@@ -12,6 +12,9 @@ class TeamController {
         params.max = Math.min(max ?: 10, 100)
         respond Team.list(params), model:[teamCount: Team.count()]
     }
+    def roster(Team team) {
+        respond team
+    }
 
     def show(Team team) {
         respond team
