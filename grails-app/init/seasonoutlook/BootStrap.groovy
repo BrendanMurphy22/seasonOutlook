@@ -25,6 +25,19 @@ class BootStrap {
                 name: 'Texans',
                 city: 'Houston',
         ).save()
+        Team panthers = new Team(
+                name: 'Panthers',
+                city: 'Carolina',
+        ).save()
+        Team buccaneers = new Team(
+                name: 'Buccaneers',
+                city: 'Tampa Bay',
+        ).save()
+        Team jets = new Team(
+                name: 'Jets',
+                city: 'New York'
+        ).save()
+
 
         //stadiums
         Stadium arrowHead = new Stadium(
@@ -77,6 +90,44 @@ class BootStrap {
                         'earplugs, including Favre. It was the first game of the season that they had chosen to do so',
                 homeTeam: saints
         ).save()
+        Stadium raymondJames = new Stadium(
+                name: 'Raymond James Stadium',
+                location: 'Tampa, Florida',
+                architect: 'Populous',
+                surface : 'Tifway 419 Bermuda',
+                yearBuilt : Date.parse('yyyy', '1998'),
+                capacity: 65890,
+                interestingFact: 'One of the most recognizable features of the stadium ' +
+                        'is a 103-foot (31 m), 43-ton steel-and-concrete replica pirate ship, ' +
+                        'which fires replica cannons each time the Bucs score points or enter the other ' +
+                        'team\'s red zone. The cannon fires once for each point scored. In addition, when the ' +
+                        'Buccaneers enter their opponent\'s red zone, stadium hosts hoist team flags ' +
+                        'around the perimeter of the upper deck. During various times throughout the game, ' +
+                        'the song "Yo Ho (A Pirate\'s Life for Me)" is played on the stadium public ' +
+                        'address system (taken from Pirates of the Caribbean), which signals patrons on ' +
+                        'board the ship to throw beads, t–shirts, and other free prizes to the people below. ' +
+                        'The segment is also known as a "Mini Gasparilla" to most fans. An animated parrot sits ' +
+                        'on the stern of the pirate ship. Controlled by radio and remote control, the parrot picks ' +
+                        'fans out of the crowd and talks to those passing by',
+                homeTeam: buccaneers
+        ).save()
+        Stadium metLife = new Stadium(
+                name: 'MetLife Stadium',
+                location: 'East Rutherford, New Jersey',
+                architect: '360 Architecture',
+                surface : 'UBU Speed Series S5-M',
+                yearBuilt : Date.parse('yyyy', '2010'),
+                capacity: 82500,
+                interestingFact: 'Front row 50 yard line seats are 46 feet (14 m) away from the sideline, ' +
+                        'which is the shortest distance of all NFL stadiums. To change the field decorations, ' +
+                        'two 4-person crews take appx. 18 hours using forklifts and other machinery to remove ' +
+                        'the 40 sections of FieldTurf which make up the teams\' respective endzones. ' +
+                        'Unlike most NFL stadiums, the NFL\'s logo is painted at midfield, instead of the logo of ' +
+                        'one of the teams, also shortening the transition time. The replaceable team logos at ' +
+                        'midfield were removed in August 2010, after Domenik Hixon tore his anterior cruciate ' +
+                        'ligament at a practice at the stadium during training camp.',
+                homeTeam: jets
+        ).save()
 
 
         //games
@@ -104,6 +155,30 @@ class BootStrap {
                 awayTeamWinRecord: 12,
                 homeTeamWinRecord: 2
         ).save()
+        Game g4 = new Game(
+                date: Date.parse("MM/dd/yyyy", "10/01/2017"),
+                stadium: gillete,
+                homeTeam: patriots,
+                awayTeam: panthers,
+                awayTeamWinRecord: 12,
+                homeTeamWinRecord: 2
+        ).save()
+        Game g5 = new Game(
+                date: Date.parse("MM/dd/yyyy", "10/05/2017"),
+                stadium: raymondJames,
+                homeTeam: buccaneers,
+                awayTeam: patriots,
+                awayTeamWinRecord: 12,
+                homeTeamWinRecord: 2
+        ).save()
+        Game g6 = new Game(
+                date: Date.parse("MM/dd/yyyy", "10/15/2017"),
+                stadium: raymondJames,
+                homeTeam: jets,
+                awayTeam: patriots,
+                awayTeamWinRecord: 12,
+                homeTeamWinRecord: 2
+        ).save()
 
         //season
         Season season = new Season(
@@ -111,7 +186,7 @@ class BootStrap {
                 startDate: Date.parse('yyyy', '1947'),
                 endDate: Date.parse('yyyy', '1947'),
         ).save()
-        season.addToGames(g1).addToGames(g2).addToGames(g3)
+        season.addToGames(g1).addToGames(g2).addToGames(g3).addToGames(g4).addToGames(g5).addToGames(g6)
 
         //players
         Player ryanAllen = new Player(
