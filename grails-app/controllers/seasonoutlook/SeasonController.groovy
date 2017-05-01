@@ -15,11 +15,15 @@ class SeasonController {
         respond Season.list(params), model:[seasonCount: Season.count()]
     }
     @Secured('ROLE_ADMIN')
+    def seasonOutlook() {
+        def games = Game.findAll().toList()
+        [games:games]
+    }
+
     def show(Season season) {
         respond season
     }
-
-    def create() {
+        def create() {
         respond new Season(params)
     }
 

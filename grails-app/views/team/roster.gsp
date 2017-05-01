@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Patriots 2017 Roster</h1>
-<a href="/">Season Outlook</a>
+<a href="/season/seasonOutlook">Season Outlook</a>
 <table>
     <tr>
         <td>First Name</td>

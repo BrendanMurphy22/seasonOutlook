@@ -29,7 +29,7 @@ class BootStrap {
         ).save()
         Team saints = new Team(
                 name: 'Saints',
-                city: 'New orleans',
+                city: 'New Orleans',
         ).save()
         Team chiefs = new Team(
                 name: 'Chiefs',
@@ -50,6 +50,10 @@ class BootStrap {
         Team jets = new Team(
                 name: 'Jets',
                 city: 'New York'
+        ).save()
+        Team falcons = new Team(
+                name: 'falcons',
+                city: 'Atlanta'
         ).save()
 
 
@@ -146,7 +150,7 @@ class BootStrap {
 
         //games
         Game g1 = new Game(
-                date: Date.parse("MM/dd/yyyy", "9/07/2017"),
+                date: Date.parse("MM/dd/yy HH:mm", "09/07/17 08:30"),
                 stadium: gillete,
                 homeTeam: patriots,
                 awayTeam: chiefs,
@@ -154,7 +158,7 @@ class BootStrap {
                 homeTeamWinRecord: 2
         ).save()
         Game g2 = new Game(
-                date: Date.parse("MM/dd/yyyy", "9/17/2017"),
+                date: Date.parse("MM/dd/yy HH:mm", "09/17/17 01:00"),
                 stadium: superdome,
                 homeTeam: saints,
                 awayTeam: patriots,
@@ -162,7 +166,7 @@ class BootStrap {
                 homeTeamWinRecord: 2
         ).save()
         Game g3 = new Game(
-                date: Date.parse("MM/dd/yyyy", "9/24/2017"),
+                date: Date.parse("MM/dd/yy HH:mm", "09/24/17 01:00"),
                 stadium: gillete,
                 homeTeam: patriots,
                 awayTeam: texans,
@@ -170,7 +174,7 @@ class BootStrap {
                 homeTeamWinRecord: 2
         ).save()
         Game g4 = new Game(
-                date: Date.parse("MM/dd/yy HH a z", "10/01/17 12 PM EST"),
+                date: Date.parse("MM/dd/yy HH:mm", "10/01/17 01:00"),
                 stadium: gillete,
                 homeTeam: patriots,
                 awayTeam: panthers,
@@ -178,7 +182,7 @@ class BootStrap {
                 homeTeamWinRecord: 2
         ).save()
         Game g5 = new Game(
-                date: Date.parse("MM/dd/yyyy", "10/05/2017"),
+                date: Date.parse("MM/dd/yy HH:mm", "10/05/17 08:25"),
                 stadium: raymondJames,
                 homeTeam: buccaneers,
                 awayTeam: patriots,
@@ -186,21 +190,30 @@ class BootStrap {
                 homeTeamWinRecord: 2
         ).save()
         Game g6 = new Game(
-                date: Date.parse("MM/dd/yyyy", "10/15/2017"),
-                stadium: raymondJames,
+                date: Date.parse("MM/dd/yy HH:mm", "10/15/17 01:00"),
+                stadium: metLife,
                 homeTeam: jets,
                 awayTeam: patriots,
+                awayTeamWinRecord: 12,
+                homeTeamWinRecord: 2
+        ).save()
+        Game g7 = new Game(
+                date: Date.parse("MM/dd/yy HH:mm", "10/22/17 08:30"),
+                stadium: gillete,
+                homeTeam: patriots,
+                awayTeam: falcons,
                 awayTeamWinRecord: 12,
                 homeTeamWinRecord: 2
         ).save()
 
         //season
         Season season = new Season(
-                name: "2017 Patriots Season",
-                startDate: Date.parse('yyyy', '1947'),
-                endDate: Date.parse('yyyy', '1947'),
+                name: "2017 Patriots Regular Season Schedule",
+                startDate: Date.parse("MM/dd/yyyy", "09/07/2017"),
+                endDate: Date.parse("MM/dd/yyyy", "12/31/2017"),
         ).save()
         season.addToGames(g1).addToGames(g2).addToGames(g3).addToGames(g4).addToGames(g5).addToGames(g6)
+                .addToGames(g7)
 
         //players
         Player ryanAllen = new Player(
