@@ -1,5 +1,7 @@
 package seasonoutlook
 
+import grails.plugin.springsecurity.annotation.Secured
+
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -12,7 +14,7 @@ class SeasonController {
         params.max = Math.min(max ?: 10, 100)
         respond Season.list(params), model:[seasonCount: Season.count()]
     }
-
+    @Secured('ROLE_ADMIN')
     def show(Season season) {
         respond season
     }

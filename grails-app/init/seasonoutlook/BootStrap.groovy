@@ -4,8 +4,22 @@ class BootStrap {
 
     def init = { servletContext ->
         setupData()
+        setupUsersAndRoles()
     }
     def destroy = {
+    }
+    def setupUsersAndRoles() {
+        def adminRole = new seasonOutlook.Role(authority: 'ROLE_ADMIN').save()
+        def userRole = new seasonOutlook.Role(authority: 'ROLE_USER').save()
+
+        def testUser = new seasonOutlook.User(username: 'tom', password: 'brady').save()
+
+        seasonOutlook.UserRole.create testUser, adminRole
+
+        seasonOutlook.UserRole.withSession {
+            it.flush()
+            it.clear()
+        }
     }
     def setupData() {
         //teams

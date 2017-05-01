@@ -1,5 +1,7 @@
 package seasonoutlook
 
+import grails.plugin.springsecurity.annotation.Secured
+
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -13,6 +15,7 @@ class StadiumController {
         respond Stadium.list(params), model:[stadiumCount: Stadium.count()]
     }
 
+    @Secured('ROLE_ADMIN')
     def show(Stadium stadium) {
         respond stadium
     }
