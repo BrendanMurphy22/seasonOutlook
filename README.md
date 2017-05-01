@@ -2,7 +2,7 @@
 
 ## Description
 
-This is my final project for CSCI E-56, a New England Patriots 2017 season outlook. The aim of this endeavor is to present a breadth of information and statistics pertaining to the forthcoming season of the defending super bowl-champion New England Patriots. The primary landing page is a calendar outlining the 2017 Patriots regular season schedule. Each game has data points such as date, time, opponent, and location. The application provides calculations from historical data that illustrate past performance versus the current opponent. I find football stadiums interesting and include unique data points for each venue like capacity, year built, architect, and an interesting fact or two. Another component of the application is a current active roster. The roster links to player profiles featuring data points like: name, university attended, position, number, age, contract status, and salary. I also include compelling data calculations like probability of being injured, and average games missed per season due to injury/suspension. The content is laid out in a logical way that appeals to my user and will scale to accommodate devices of different size.
+This is my final project for CSCI E-56, a New England Patriots 2017 season outlook. The aim of this endeavor is to present a breadth of information and statistics pertaining to the forthcoming season of the defending super bowl-champion New England Patriots. The primary landing page is a calendar outlining the 2017 Patriots regular season schedule. Each game has data points such as date, time, opponent, and location. The application provides calculations from historical data that illustrate past performance versus the current opponent. I find football stadiums interesting and include unique data points for each venue like capacity, year built, architect, and an interesting fact or two. Another component of the application is a current active roster. The roster links to player profiles featuring data points like: name, university attended, position, number, age, contract status, and salary. I also include compelling data calculations like probability of being injured, and average games missed per season due to injury/suspension. The content is laid out in a logical way that appeals to my user and scales to accommodate devices of different size.
 
 ## Outline
 
@@ -51,13 +51,13 @@ This is my final project for CSCI E-56, a New England Patriots 2017 season outlo
 - City
 
 **6. User**
-- Default properties
+- Default properties from Spring Security
 
 **7. Role**
-- Default properties
+- Default properties from Spring Security
 
 **8. UserRole**
-- Default properties
+- Default properties from Spring Security
 
 
 
