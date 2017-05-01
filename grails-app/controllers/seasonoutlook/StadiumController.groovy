@@ -14,6 +14,11 @@ class StadiumController {
         params.max = Math.min(max ?: 10, 100)
         respond Stadium.list(params), model:[stadiumCount: Stadium.count()]
     }
+    @Secured('ROLE_ADMIN')
+    def stadiums() {
+        def stadiums = Stadium.findAll().toList()
+        [stadiums:stadiums]
+    }
 
     @Secured('ROLE_ADMIN')
     def show(Stadium stadium) {

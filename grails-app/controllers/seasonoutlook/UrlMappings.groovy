@@ -10,6 +10,8 @@ class UrlMappings {
         }
 
         "/"(uri: "/season/seasonOutlook")
+        "/patriots/roster"(uri: "/team/roster/1")
+        "/nfl/stadiums"(uri: "/stadium/stadiums")
         "500"(view:'/error')
         "404"(view:'/notFound')
     }

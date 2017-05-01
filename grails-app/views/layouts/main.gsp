@@ -7,45 +7,50 @@
         <g:layoutTitle default="Grails"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-    <asset:stylesheet src="application.css"/>
-
+    <asset:javascript src="jquery-2.2.0.min.js"/>
+    <asset:stylesheet src="bootstrap.css"/>
+    <asset:javascript src="bootstrap.js"/>
     <g:layoutHead/>
 </head>
 <body>
 
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/#">
-                    <i class="fa grails-icon">
-                        <asset:image src="grails-cupsonly-logo-white.svg"/>
-                    </i> Grails
-                </a>
-            </div>
-            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
-                <ul class="nav navbar-nav navbar-right">
-                    <g:pageProperty name="page.nav" />
-                </ul>
-            </div>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand hidden-md hidden-lg" href="#"><g:layoutTitle/></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/season/seasonOutlook">Schedule</a></li>
+                <li><a href="/patriots/roster">Roster</a></li>
+                <li><a href="/nfl/stadiums">NFL Stadiums</a></li>
+            </ul>
+            <sec:ifLoggedIn>
+                <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">
+                    <sec:loggedInUserInfo field='username'/></a>
+                <form class="navbar-text navbar-right" name="logout" method="POST" action="${createLink(controller:'logout') }">
+                    <input type="submit" value="logout"></form></p>
+            </sec:ifLoggedIn>
+            <sec:ifNotLoggedIn>
+                <p class="navbar-text navbar-right"><g:link controller='login' action='auth'>Login</g:link></p>
+            </sec:ifNotLoggedIn>
         </div>
     </div>
+</nav>
 
-    <g:layoutBody/>
+<g:layoutBody/>
 
-    <div class="footer" role="contentinfo"></div>
 
-    <div id="spinner" class="spinner" style="display:none;">
-        <g:message code="spinner.alt" default="Loading&hellip;"/>
-    </div>
+<div id="spinner" class="spinner" style="display:none;">
+    <g:message code="spinner.alt" default="Loading&hellip;"/>
+</div>
 
-    <asset:javascript src="application.js"/>
+<asset:javascript src="application.js"/>
 
 </body>
 </html>
