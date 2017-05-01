@@ -14,15 +14,15 @@
     <div class="row">
         <div class="col-sm-12 col-md-12">
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped" id="myTable">
                     <thead>
-                        <th>Date</th>
-                        <th>Away Team</th>
-                        <th>Home Team</th>
-                        <th>Venue</th>
-                        <th>Away Team Wins</th>
-                        <th>Home Team Wins</th>
-                        <th>Win Probability</th>
+                    <th onclick="sortTable(0)">Date</th>
+                    <th onclick="sortTable(1)">Away Team</th>
+                    <th onclick="sortTable(2)">Home Team</th>
+                    <th onclick="sortTable(3)">Venue</th>
+                    <th onclick="sortTable(4)">Away Team Wins</th>
+                    <th onclick="sortTable(5)">Home Team Wins</th>
+                    <th onclick="sortTable(6)">Win Probability</th>
                     </thead>
                     <g:each in="${games}" var="game">
                         <tr><td><g:formatDate format="MM/dd/yy HH:mm" date="${game.date}"/>PM</td>

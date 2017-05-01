@@ -68,3 +68,4 @@ My final project for CSCI E-56 will be a New England Patriots 2017 season outloo
 - bootStrap
 - Grails
 - Spring Security Plugin
+- <a href="https://www.w3schools.com/howto/howto_js_sort_table.asp" target="_blank">Javascript Table Sorting</a>

@@ -14,16 +14,16 @@
     <div class="row">
         <div class="col-sm-12 col-md-12">
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped" id="myTable">
                     <thead>
-                    <th>Name</th>
-                    <th>Location</th>
-                    <th>Architect</th>
-                    <th>Playing Surface</th>
-                    <th>Year Built</th>
-                    <th>Capacity</th>
-                    <th>Home Team</th>
-                    <th>Interesting Fact</th>
+                    <th onclick="sortTable(0)">Name</th>
+                    <th onclick="sortTable(1)">Location</th>
+                    <th onclick="sortTable(2)">Architect</th>
+                    <th onclick="sortTable(3)">Playing Surface</th>
+                    <th onclick="sortTable(4)">Year Built</th>
+                    <th onclick="sortTable(5)">Capacity</th>
+                    <th onclick="sortTable(6)">Home Team</th>
+                    <th onclick="sortTable(7)">Interesting Fact</th>
                     </thead>
                     <g:each in="${stadiums}" var="stadium">
                         <tr>

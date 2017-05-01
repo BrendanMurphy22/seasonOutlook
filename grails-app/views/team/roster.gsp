@@ -14,20 +14,20 @@
     <div class="row">
         <div class="col-sm-12 col-md-12">
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped" id="myTable">
                     <thead>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Position</th>
-                        <th>University</th>
-                        <th>Age</th>
-                        <th>Jersey Number</th>
-                        <th>Contract</th>
-                        <th>Value</th>
-                        <th>Free Agent</th>
-                        <th>Total Games Played</th>
-                        <th>Total Games Missed</th>
-                        <th>Average Games Played/Season</th>
+                        <th onclick="sortTable(0)">First Name</th>
+                        <th onclick="sortTable(1)">Last Name</th>
+                        <th onclick="sortTable(2)">Position</th>
+                        <th onclick="sortTable(3)">University</th>
+                        <th onclick="sortTable(4)">Age</th>
+                        <th onclick="sortTable(5)">Jersey Number</th>
+                        <th onclick="sortTable(6)">Contract</th>
+                        <th onclick="sortTable(7)">Value</th>
+                        <th onclick="sortTable(8)">Free Agent on</th>
+                        <th onclick="sortTable(9)">Total Games Played</th>
+                        <th onclick="sortTable(10)">Total Games Missed</th>
+                        <th onclick="sortTable(11)">Average Games Played/Season</th>
                     </thead>
                     <g:each in="${team.players}" var="player">
                         <tr>
@@ -39,7 +39,7 @@
                             <td>${player.jerseyNum}</td>
                             <td>${player.underContract}</td>
                             <td>${player.contractVal}</td>
-                            <td>${player.contractEnd}</td>
+                            <td><g:formatDate format="MM/dd/yy" date="${player.contractEnd}"/></td>
                             <td>${player.totalGamesPlayed}</td>
                             <td>${player.totalGamesMissed}</td>
                             <td>//TODO</td>
@@ -52,3 +52,4 @@
 </div>
 </body>
 </html>
+
