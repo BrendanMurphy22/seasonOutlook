@@ -29,7 +29,7 @@
                         <tr><td><g:formatDate format="MM/dd/yy HH:mm" date="${game.date}"/>PM</td>
                         <td>${game.awayTeam.city + ' ' + game.awayTeam.name}</td>
                         <td>${game.homeTeam.city + ' ' + game.homeTeam.name}</td>
-                        <td><a href="/stadium/show/${game.stadium.id}">${game.stadium.name}</ahref></td>
+                        <td>${game.stadium.name}</td>
                         <td>${game.homeTeamWinRecord}</td>
                         <td>${game.awayTeamWinRecord}</td>
                         <td>//TODO</td></tr>

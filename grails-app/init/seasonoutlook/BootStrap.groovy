@@ -55,6 +55,18 @@ class BootStrap {
                 name: 'falcons',
                 city: 'Atlanta'
         ).save()
+        Team chargers = new Team(
+                name: 'Chargers',
+                city: 'Los Angeles'
+        ).save()
+        Team broncos = new Team(
+                name: 'Broncos',
+                city: 'Denver'
+        ).save()
+        Team raiders = new Team(
+                name: 'Raiders',
+                city: 'Oakland'
+        ).save()
 
 
         //stadiums
@@ -146,6 +158,31 @@ class BootStrap {
                         'ligament at a practice at the stadium during training camp.',
                 homeTeam: jets
         ).save()
+        Stadium mileHigh = new Stadium(
+                name: 'Sports Authority Field at Mile High',
+                location: 'Denver, Colorado',
+                architect: 'HNTB',
+                surface : 'Kentucky Bluegrass',
+                yearBuilt : Date.parse('yyyy', '2001'),
+                capacity: 76125,
+                    interestingFact: 'A home game tradition (carried over from the original Mile High Stadium) is the "Incomplete Chant." At Bronco home games, when the opposing team throws an incomplete pass, the stadium announcer will state "Pass thrown by [the opposing quarterback] intended for [the opposing intended receiver] is..." at which time the fans complete the sentence by shouting "IN-COM-PLETE!!"\n' +
+                            'The stadium has sold out every Denver Broncos\' home game since its inception in 2001, extending the "sold-out" streak that began during the team\'s tenure at Mile High Stadium, where every home game had been sold out since 1970 (though due to NFL policy, local TV broadcasts of sold-out games did not start until 1973). In a tradition carried over from Mile High Stadium, the stadium\'s public-address announcer will give the final official attendance for the game, including the number of unused tickets; in response, Broncos fans "boo" the no-shows.\n' +
+                            'During the stadium\'s first years, in another tradition was carried over from Mile High, Broncos fans on one side of the stadium would chant "Go" and fans on the other side would respond "Broncos," back and forth chanting for several minutes. That tradition has since died out. Another long-term tradition is famed rowdiness of fans seated in the "South Stands," although this tradition has diminished significantly as well.\n' +
+                            'Finally, especially in the upper two decks, the fans create their own \'Mile High Thunder\' (and warm themselves) by stamping their feet on the stadium\'s floors. The old Mile High Stadium was built with bare metal, and the \'Thunder\' reverberated readily. The new stadium was built with steel floors to preserve this unique acoustic feature.[15]\n' +
+                            'On December 21, 2012, the Broncos announced a $30 million renovation project prior to the start of the 2013 season, including a new high-definition LED video board on the stadium\'s south end zone that triples the size of the old video board.[16]\n' +
+                            'In 2013, it was revealed that a Kansas City Chiefs jersey (Neil Smith) was buried somewhere near the 50-yard line by a couple of out-of-state contractors during renovations',
+                homeTeam: broncos
+        ).save()
+        Stadium mexico = new Stadium(
+                name: 'Estadio Azteca',
+                location: 'Mexico City, Mexico',
+                architect: 'Pedro Ramírez Vázquez',
+                surface : 'Grass',
+                yearBuilt : Date.parse('yyyy', '1966'),
+                capacity: 87500,
+                interestingFact: 'The Estadio Azteca was designed by architects Pedro Ramírez Vázquez and Rafael Mijares Alcérreca and broke ground in 1961. The inaugural match was between Club América and Torino F.C. on 29 May 1966, with a capacity for 107,494 spectators. The first goal was scored by Brazilian Arlindo Dos Santos and the second one by Brazilian José Alves "Zague"; later, the Italians tied the game, which ended in 2–2 draw. Mexican president Gustavo Díaz Ordaz made the initial kick and FIFA president Sir Stanley Rous was the witness.' + 'Estadio Azteca has also been used for musical performances throughout its history. Michael Jackson (5 sold-out shows in 1993),[14] U2 (in 2006 and 2011), Luis Miguel (in 2002), Elton John, Maná, Juan Gabriel, Gloria Estefan, Jaguares, Lenny Kravitz, *Nsync, Hanson, Ana Gabriel, and The Three Tenors all have become part of the stadium\'s main spectacle. The stadium has also been used for political events, including Mexican president Felipe Calderón\'s campaign closure in 2006, as well as religious events, such as Jehovah\'s Witnesses conventions, and the appearance of Pope John Paul II in 1999.',
+                homeTeam: raiders
+        ).save()
 
 
         //games
@@ -205,6 +242,30 @@ class BootStrap {
                 awayTeamWinRecord: 12,
                 homeTeamWinRecord: 2
         ).save()
+        Game g8 = new Game(
+                date: Date.parse("MM/dd/yy HH:mm", "10/29/17 01:00"),
+                stadium: gillete,
+                homeTeam: patriots,
+                awayTeam: chargers,
+                awayTeamWinRecord: 12,
+                homeTeamWinRecord: 2
+        ).save()
+        Game g9 = new Game(
+                date: Date.parse("MM/dd/yy HH:mm", "10/29/17 08:30"),
+                stadium: gillete,
+                homeTeam: broncos,
+                awayTeam: patriots,
+                awayTeamWinRecord: 12,
+                homeTeamWinRecord: 2
+        ).save()
+        Game g10 = new Game(
+                date: Date.parse("MM/dd/yy HH:mm", "10/29/17 08:30"),
+                stadium: mexico,
+                homeTeam: raiders,
+                awayTeam: patriots,
+                awayTeamWinRecord: 12,
+                homeTeamWinRecord: 2
+        ).save()
 
         //season
         Season season = new Season(
@@ -213,7 +274,7 @@ class BootStrap {
                 endDate: Date.parse("MM/dd/yyyy", "12/31/2017"),
         ).save()
         season.addToGames(g1).addToGames(g2).addToGames(g3).addToGames(g4).addToGames(g5).addToGames(g6)
-                .addToGames(g7)
+                .addToGames(g7).addToGames(g8).addToGames(g9).addToGames(g10)
 
         //players
         Player ryanAllen = new Player(
