@@ -69,3 +69,7 @@ My final project for CSCI E-56 will be a New England Patriots 2017 season outloo
 - Grails
 - Spring Security Plugin
 - <a href="https://www.w3schools.com/howto/howto_js_sort_table.asp" target="_blank">Javascript Table Sorting</a>
+
+### Externally Sourced Images and Direct Quotes
+ - The 2017 season header image is property of patriots.com
+ - Many of the interesting facts associated with NFL stadiums are from Wikipedia

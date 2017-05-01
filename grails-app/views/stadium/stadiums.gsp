@@ -32,9 +32,14 @@
                             <td>${stadium.architect}</td>
                             <td>${stadium.surface}</td>
                             <td><g:formatDate format="yyyy" date="${stadium.yearBuilt}"/></td>
-                            <td>${stadium.capacity}</td>
+                            <td><g:formatNumber number="${stadium.capacity}" format="##,###" /></td>
                             <td>${stadium.homeTeam.name}</td>
-                            <td>${stadium.interestingFact}</td>
+                            <!-- Button trigger modal -->
+                            <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#stadium${stadium.id}">
+                                ${stadium.name}
+                            </button>
+                            <g:render template="modalPop" model="[stadium:stadium]" /></td>
+                            </div>
                         </tr>
                     </g:each>
                 </table>

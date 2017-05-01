@@ -38,7 +38,7 @@
                             <td>${player.age}</td>
                             <td>${player.jerseyNum}</td>
                             <td>${player.underContract}</td>
-                            <td>${player.contractVal}</td>
+                            <td><g:formatNumber number="${player.contractVal}" type="currency" currencyCode="USD" /></td>
                             <td><g:formatDate format="MM/dd/yy" date="${player.contractEnd}"/></td>
                             <td>${player.totalGamesPlayed}</td>
                             <td>${player.totalGamesMissed}</td>
