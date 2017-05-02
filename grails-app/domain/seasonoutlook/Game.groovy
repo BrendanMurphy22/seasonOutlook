@@ -8,6 +8,17 @@ class Game {
     Integer homeTeamWinRecord
     Integer awayTeamWinRecord
 
+    def getProbableWinner() {
+        Double d = Math.random()
+        if (d < homeTeamWinRecord.toFloat().round(2))
+        {
+            return homeTeam.name
+        }
+        else if (d < homeTeamWinRecord.toFloat().round(2))
+        {
+            return awayTeam.name
+        }
+    }
     static constraints = {
         date blank: false, nullable: false
         stadium blank: false, nullable: false

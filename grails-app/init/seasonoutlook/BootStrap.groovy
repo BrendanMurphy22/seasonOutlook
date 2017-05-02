@@ -191,80 +191,80 @@ class BootStrap {
                 stadium: gillete,
                 homeTeam: patriots,
                 awayTeam: chiefs,
-                awayTeamWinRecord: 12,
-                homeTeamWinRecord: 2
+                awayTeamWinRecord: 2,
+                homeTeamWinRecord: 8
         ).save()
         Game g2 = new Game(
                 date: Date.parse("MM/dd/yy HH:mm", "09/17/17 01:00"),
                 stadium: superdome,
                 homeTeam: saints,
                 awayTeam: patriots,
-                awayTeamWinRecord: 12,
-                homeTeamWinRecord: 2
+                awayTeamWinRecord: 7,
+                homeTeamWinRecord: 3
         ).save()
         Game g3 = new Game(
                 date: Date.parse("MM/dd/yy HH:mm", "09/24/17 01:00"),
                 stadium: gillete,
                 homeTeam: patriots,
                 awayTeam: texans,
-                awayTeamWinRecord: 12,
-                homeTeamWinRecord: 2
+                awayTeamWinRecord: 1,
+                homeTeamWinRecord: 9
         ).save()
         Game g4 = new Game(
                 date: Date.parse("MM/dd/yy HH:mm", "10/01/17 01:00"),
                 stadium: gillete,
                 homeTeam: patriots,
                 awayTeam: panthers,
-                awayTeamWinRecord: 12,
-                homeTeamWinRecord: 2
+                awayTeamWinRecord: 4,
+                homeTeamWinRecord: 6
         ).save()
         Game g5 = new Game(
                 date: Date.parse("MM/dd/yy HH:mm", "10/05/17 08:25"),
                 stadium: raymondJames,
                 homeTeam: buccaneers,
                 awayTeam: patriots,
-                awayTeamWinRecord: 12,
-                homeTeamWinRecord: 2
+                awayTeamWinRecord: 9,
+                homeTeamWinRecord: 1
         ).save()
         Game g6 = new Game(
                 date: Date.parse("MM/dd/yy HH:mm", "10/15/17 01:00"),
                 stadium: metLife,
                 homeTeam: jets,
                 awayTeam: patriots,
-                awayTeamWinRecord: 12,
-                homeTeamWinRecord: 2
+                awayTeamWinRecord: 10,
+                homeTeamWinRecord: 0
         ).save()
         Game g7 = new Game(
                 date: Date.parse("MM/dd/yy HH:mm", "10/22/17 08:30"),
                 stadium: gillete,
                 homeTeam: patriots,
                 awayTeam: falcons,
-                awayTeamWinRecord: 12,
-                homeTeamWinRecord: 2
+                awayTeamWinRecord: 2,
+                homeTeamWinRecord: 8
         ).save()
         Game g8 = new Game(
                 date: Date.parse("MM/dd/yy HH:mm", "10/29/17 01:00"),
                 stadium: gillete,
                 homeTeam: patriots,
                 awayTeam: chargers,
-                awayTeamWinRecord: 12,
-                homeTeamWinRecord: 2
+                awayTeamWinRecord: 5,
+                homeTeamWinRecord: 5
         ).save()
         Game g9 = new Game(
                 date: Date.parse("MM/dd/yy HH:mm", "10/29/17 08:30"),
                 stadium: gillete,
                 homeTeam: broncos,
                 awayTeam: patriots,
-                awayTeamWinRecord: 12,
-                homeTeamWinRecord: 2
+                awayTeamWinRecord: 6,
+                homeTeamWinRecord: 4
         ).save()
         Game g10 = new Game(
                 date: Date.parse("MM/dd/yy HH:mm", "10/29/17 08:30"),
                 stadium: mexico,
                 homeTeam: raiders,
                 awayTeam: patriots,
-                awayTeamWinRecord: 12,
-                homeTeamWinRecord: 2
+                awayTeamWinRecord: 9,
+                homeTeamWinRecord: 1
         ).save()
 
         //season
