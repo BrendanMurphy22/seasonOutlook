@@ -8,8 +8,35 @@
 * compiled file, but it's generally better to create a new file per style scope.
 *
 *= require bootstrap
-*= require grails
-*= require main
 *= require mobile
 *= require_self
 */
+#site-nav {
+    background-color: #000080;
+}
+
+#site-nav a , .navbar-inverse .navbar-text{
+    color: #fff;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus
+{
+    background-color: #000080;
+}
+
+th
+{
+    cursor: pointer;
+}
+
+.centered {
+    text-align: center;
+}
+#logOutbutton {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}

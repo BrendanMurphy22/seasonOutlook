@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <header>
-        <h1>Patriots 2017 Roster</h1>
+        <h1 class="centered">Patriots 2017 Roster</h1>
     </header>
     <div class="row">
         <div class="col-sm-12 col-md-12">
@@ -42,7 +42,7 @@
                             <td><g:formatDate format="MM/dd/yy" date="${player.contractEnd}"/></td>
                             <td>${player.totalGamesPlayed}</td>
                             <td>${player.totalGamesMissed}</td>
-                            <td>${player.getAverageGamesPlayed()}</td>
+                            <td><g:formatNumber number="${player.getAverageGamesPlayed()}" type="number" maxFractionDigits="2" /></td>
                         </tr>
                     </g:each>
                 </table>

@@ -61,7 +61,7 @@ This is my final project for CSCI E-56, a New England Patriots 2017 season outlo
 
 
 
->Will probably update the user permissions so that an authenticated user can update/edit the data to modify the outcomes of the probability calculations
+>Will probably update the user permissions so that an authenticated user can update/edit player data. All data is fictional unless otherwise noted.
 
 ### Libraries  
 - jQuery

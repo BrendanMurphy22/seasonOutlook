@@ -10,7 +10,7 @@
 <div class="container">
     <header>
         <g:img dir="images" file="patsSchedule.jpg" class="img-fluid" alt="Responsive image"/>
-        <h1>2017 Season Outlook</h1>
+        <h1 class="centered">2017 Season Outlook</h1>
     </header>
     <div class="row">
         <div class="col-sm-12 col-md-12">

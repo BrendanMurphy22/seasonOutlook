@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <header>
-        <h1>Patriots 2017 Battlefields</h1>
+        <h1 class="centered">Patriots 2017 Battlefields</h1>
     </header>
     <div class="row">
         <div class="col-sm-12 col-md-12">
