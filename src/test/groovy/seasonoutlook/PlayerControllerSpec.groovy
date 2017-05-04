@@ -20,6 +20,7 @@ class PlayerControllerSpec extends Specification {
                    contractLength: "12",
                    totalGamesPlayed: "41",
                    totalGamesMissed: "2",
+                   seasonsPlayed: "3",
                    Team: [new Team()]]
     }
 

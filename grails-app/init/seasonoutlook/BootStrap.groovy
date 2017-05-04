@@ -287,8 +287,9 @@ class BootStrap {
                 underContract: true,
                 contractVal: 2000000,
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/1947'),
-                totalGamesPlayed: 101,
-                totalGamesMissed: 12).save()
+                totalGamesPlayed: 48,
+                totalGamesMissed: 12,
+                seasonsPlayed: 3).save()
         Player dannyAmendola = new Player(
                 firstName:'Danny',
                 lastName:'Amendola',
@@ -299,8 +300,9 @@ class BootStrap {
                 underContract: true,
                 contractVal: 4500000,
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
-                totalGamesPlayed: 98,
-                totalGamesMissed: 7).save()
+                totalGamesPlayed: 32,
+                totalGamesMissed: 7,
+                seasonsPlayed: 2).save()
         Player davidAndrews = new Player(
                 firstName:'David',
                 lastName:'Andrews',
@@ -311,8 +313,9 @@ class BootStrap {
                 underContract: true,
                 contractVal: 20000,
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
-                totalGamesPlayed: 31,
-                totalGamesMissed: 2).save()
+                totalGamesPlayed: 64,
+                totalGamesMissed: 2,
+                seasonsPlayed: 4).save()
         Player chrisBarker = new Player(
                 firstName:'Chris',
                 lastName:'Barker',
@@ -323,8 +326,9 @@ class BootStrap {
                 underContract: true,
                 contractVal: 2000000,
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
-                totalGamesPlayed: 21,
-                totalGamesMissed: 1).save()
+                totalGamesPlayed: 48,
+                totalGamesMissed: 1,
+                seasonsPlayed: 3).save()
         Player trevorBates = new Player(
                 firstName:'Trevor',
                 lastName:'Bates',
@@ -335,8 +339,9 @@ class BootStrap {
                 underContract: true,
                 contractVal: 120000,
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
-                totalGamesPlayed: 5,
-                totalGamesMissed: 0).save()
+                totalGamesPlayed: 72,
+                totalGamesMissed: 0,
+                seasonsPlayed: 6).save()
         Player brandonBolden = new Player(
                 firstName:'Brandon',
                 lastName:'Bolden',
@@ -347,8 +352,9 @@ class BootStrap {
                 underContract: true,
                 contractVal: 150000,
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/1947'),
-                totalGamesPlayed: 101,
-                totalGamesMissed: 12).save()
+                totalGamesPlayed: 48,
+                totalGamesMissed: 12,
+                seasonsPlayed: 3).save()
         Player tomBrady  = new Player(
                 firstName:'Tom',
                 lastName:'Brady',
@@ -359,8 +365,9 @@ class BootStrap {
                 underContract: true,
                 contractVal: 2000000,
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/1947'),
-                totalGamesPlayed: 400,
-                totalGamesMissed: 12).save()
+                totalGamesPlayed: 48,
+                totalGamesMissed: 1,
+                seasonsPlayed: 3).save()
 
         patriots.addToPlayers(ryanAllen).addToPlayers(dannyAmendola).addToPlayers(davidAndrews).addToPlayers(chrisBarker)
                 .addToPlayers(trevorBates).addToPlayers(brandonBolden).addToPlayers(tomBrady)

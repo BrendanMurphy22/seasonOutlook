@@ -12,9 +12,13 @@ class Player {
     Date contractEnd
     Integer totalGamesPlayed
     Integer totalGamesMissed
-
+    Integer seasonsPlayed
 
     static belongsTo = Team
+
+    def getAverageGamesPlayed(){
+        ((totalGamesPlayed-totalGamesMissed)/seasonsPlayed)
+    }
 
     static constraints = {
         firstName maxSize: 150, blank: false, nullable: false
@@ -29,5 +33,6 @@ class Player {
         contractEnd  blank: false, nullable: true
         totalGamesPlayed  blank: false, nullable: true
         totalGamesMissed  blank: false, nullable: true
+        seasonsPlayed blank: false, nullable: true
     }
 }

@@ -17,7 +17,7 @@
             <div class="table-responsive">
                 <table class="table table-striped" id="myTable">
                     <thead>
-                    <th onclick="sortTable(0)">Brendan</th>
+                    <th onclick="sortTable(0)">Game Date</th>
                     <th onclick="sortTable(1)">Away Team</th>
                     <th onclick="sortTable(2)">Home Team</th>
                     <th onclick="sortTable(3)">Venue</th>

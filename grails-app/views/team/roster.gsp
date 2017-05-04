@@ -42,7 +42,7 @@
                             <td><g:formatDate format="MM/dd/yy" date="${player.contractEnd}"/></td>
                             <td>${player.totalGamesPlayed}</td>
                             <td>${player.totalGamesMissed}</td>
-                            <td>//TODO</td>
+                            <td>${player.getAverageGamesPlayed()}</td>
                         </tr>
                     </g:each>
                 </table>

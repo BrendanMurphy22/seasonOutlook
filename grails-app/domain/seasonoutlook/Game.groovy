@@ -8,6 +8,7 @@ class Game {
     Integer homeTeamWinRecord
     Integer awayTeamWinRecord
 
+    //this function may not be performing as expected, looking to find another solution
     def getProbableWinner() {
         Double d = Math.random()
         if (d < homeTeamWinRecord.toFloat().round(2))
