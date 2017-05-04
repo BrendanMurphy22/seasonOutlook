@@ -28,9 +28,9 @@
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/season/seasonOutlook">Schedule</a></li>
-                <li><a href="/patriots/roster">Roster</a></li>
-                <li><a href="/nfl/stadiums">NFL Stadiums</a></li>
+                <li class="active"><a href="/season/seasonOutlook">SCHEDULE</a></li>
+                <li><a href="/patriots/roster">ROSTER</a></li>
+                <li><a href="/nfl/stadiums">NLF STADIUMS</a></li>
             </ul>
             <sec:ifLoggedIn>
                 <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">

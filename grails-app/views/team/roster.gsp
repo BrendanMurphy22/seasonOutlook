@@ -28,6 +28,7 @@
                         <th onclick="sortTable(9)">Total Games Played</th>
                         <th onclick="sortTable(10)">Total Games Missed</th>
                         <th onclick="sortTable(11)">Average Games Played/Season</th>
+                        <sec:ifLoggedIn><th>Update Player</th></sec:ifLoggedIn>
                     </thead>
                     <g:each in="${team.players}" var="player">
                         <tr>
@@ -43,6 +44,7 @@
                             <td>${player.totalGamesPlayed}</td>
                             <td>${player.totalGamesMissed}</td>
                             <td><g:formatNumber number="${player.getAverageGamesPlayed()}" type="number" maxFractionDigits="2" /></td>
+                        <sec:ifLoggedIn> <td><a href="/player/edit/${player.id}">Edit</a></td></sec:ifLoggedIn>
                         </tr>
                     </g:each>
                 </table>

@@ -1,5 +1,7 @@
 package seasonoutlook
 
+import grails.plugin.springsecurity.annotation.Secured
+
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -21,7 +23,7 @@ class PlayerController {
     def create() {
         respond new Player(params)
     }
-
+    @Secured('ROLE_ADMIN')
     @Transactional
     def save(Player player) {
         if (player == null) {
@@ -46,11 +48,11 @@ class PlayerController {
             '*' { respond player, [status: CREATED] }
         }
     }
-
+    @Secured('ROLE_ADMIN')
     def edit(Player player) {
         respond player
     }
-
+    @Secured('ROLE_ADMIN')
     @Transactional
     def update(Player player) {
         if (player == null) {
@@ -70,12 +72,12 @@ class PlayerController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'player.label', default: 'Player'), player.id])
-                redirect player
+                redirect(uri:'/patriots/roster')
             }
             '*'{ respond player, [status: OK] }
         }
     }
-
+    @Secured('ROLE_ADMIN')
     @Transactional
     def delete(Player player) {
 
