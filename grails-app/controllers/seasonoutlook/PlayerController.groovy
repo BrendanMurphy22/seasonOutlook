@@ -14,12 +14,12 @@ class PlayerController {
         params.max = Math.min(max ?: 10, 100)
         respond Player.list(params), model:[playerCount: Player.count()]
     }
-
+    @Secured('ROLE_ADMIN')
     def show(Player player) {
         respond player
     }
 
-
+    @Secured('ROLE_ADMIN')
     def create() {
         respond new Player(params)
     }
@@ -43,7 +43,7 @@ class PlayerController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'player.label', default: 'Player'), player.id])
-                redirect player
+                redirect(uri:'/patriots/roster')
             }
             '*' { respond player, [status: CREATED] }
         }
@@ -92,7 +92,7 @@ class PlayerController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'player.label', default: 'Player'), player.id])
-                redirect action:"index", method:"GET"
+                redirect(uri:'/patriots/roster')
             }
             '*'{ render status: NO_CONTENT }
         }

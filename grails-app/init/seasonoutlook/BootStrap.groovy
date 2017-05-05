@@ -288,6 +288,7 @@ class BootStrap {
                 contractVal: 2000000,
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/1947'),
                 totalGamesPlayed: 48,
+                team: patriots,
                 totalGamesMissed: 12,
                 seasonsPlayed: 3).save()
         Player dannyAmendola = new Player(
@@ -302,6 +303,7 @@ class BootStrap {
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
                 totalGamesPlayed: 32,
                 totalGamesMissed: 7,
+                team: patriots,
                 seasonsPlayed: 2).save()
         Player davidAndrews = new Player(
                 firstName:'David',
@@ -315,6 +317,7 @@ class BootStrap {
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
                 totalGamesPlayed: 64,
                 totalGamesMissed: 2,
+                team: patriots,
                 seasonsPlayed: 4).save()
         Player chrisBarker = new Player(
                 firstName:'Chris',
@@ -328,6 +331,7 @@ class BootStrap {
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
                 totalGamesPlayed: 48,
                 totalGamesMissed: 1,
+                team: patriots,
                 seasonsPlayed: 3).save()
         Player trevorBates = new Player(
                 firstName:'Trevor',
@@ -353,6 +357,7 @@ class BootStrap {
                 contractVal: 150000,
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/1947'),
                 totalGamesPlayed: 48,
+                team: patriots,
                 totalGamesMissed: 12,
                 seasonsPlayed: 3).save()
         Player tomBrady  = new Player(
@@ -367,9 +372,7 @@ class BootStrap {
                 contractEnd: Date.parse('MM/dd/yyyy', '9/21/1947'),
                 totalGamesPlayed: 48,
                 totalGamesMissed: 1,
+                team: patriots,
                 seasonsPlayed: 3).save()
-
-        patriots.addToPlayers(ryanAllen).addToPlayers(dannyAmendola).addToPlayers(davidAndrews).addToPlayers(chrisBarker)
-                .addToPlayers(trevorBates).addToPlayers(brandonBolden).addToPlayers(tomBrady)
     }
 }

@@ -11,6 +11,12 @@
             <div class="col-sm-12 col-md-12">
         <div id="edit-player" class="content scaffold-edit" role="main">
             <h1><g:message code="default.edit.label" args="[entityName]" /></h1>
+            <g:form resource="${this.player}" method="DELETE">
+                <fieldset>
+                    <button type="submit"
+                            onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');"type="button" class="btn btn-danger">Delete This Player</button>
+                </fieldset>
+            </g:form>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>
@@ -26,8 +32,8 @@
                 <fieldset class="form">
                     <f:all bean="player"/>
                 </fieldset>
-                <fieldset class="buttons">
-                    <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+                <fieldset>
+                    <button class="btn btn-info" type="submit">Update</button>
                 </fieldset>
             </g:form>
         </div>

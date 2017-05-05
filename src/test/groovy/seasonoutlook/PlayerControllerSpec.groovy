@@ -21,7 +21,7 @@ class PlayerControllerSpec extends Specification {
                    totalGamesPlayed: "41",
                    totalGamesMissed: "2",
                    seasonsPlayed: "3",
-                   Team: [new Team()]]
+                   team: [new Team()]]
     }
 
     void "Test the index action returns the correct model"() {
@@ -63,7 +63,7 @@ class PlayerControllerSpec extends Specification {
             controller.save(player)
 
         then:"A redirect is issued to the show action"
-            response.redirectedUrl == '/player/show/1'
+            response.redirectedUrl == '/patriots/roster'
             controller.flash.message != null
             Player.count() == 1
     }
@@ -128,7 +128,7 @@ class PlayerControllerSpec extends Specification {
 
         then:"A redirect is issued to the show action"
             player != null
-            response.redirectedUrl == "/player/show/$player.id"
+            response.redirectedUrl == "/patriots/roster"
             flash.message != null
     }
 
@@ -155,7 +155,7 @@ class PlayerControllerSpec extends Specification {
 
         then:"The instance is deleted"
             Player.count() == 0
-            response.redirectedUrl == '/player/index'
+            response.redirectedUrl == "/patriots/roster"
             flash.message != null
     }
 }

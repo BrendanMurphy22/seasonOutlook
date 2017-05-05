@@ -47,6 +47,23 @@
                         <sec:ifLoggedIn> <td><a href="/player/edit/${player.id}">Edit</a></td></sec:ifLoggedIn>
                         </tr>
                     </g:each>
+                    <sec:ifLoggedIn>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><a href="/player/create/" class="btn btn-success" role="button">Add Player</a></td>
+                        </tr>
+                    </sec:ifLoggedIn>
                 </table>
             </div>
         </div>

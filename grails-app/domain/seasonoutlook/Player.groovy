@@ -14,7 +14,7 @@ class Player {
     Integer totalGamesMissed
     Integer seasonsPlayed
 
-    static belongsTo = Team
+   Team team
 
     def getAverageGamesPlayed(){
         ((totalGamesPlayed-totalGamesMissed)/seasonsPlayed)
