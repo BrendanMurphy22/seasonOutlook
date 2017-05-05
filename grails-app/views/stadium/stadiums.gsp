@@ -20,7 +20,7 @@
                     <th onclick="sortTable(1)">Location</th>
                     <th onclick="sortTable(2)">Architect</th>
                     <th onclick="sortTable(3)">Playing Surface</th>
-                    <th onclick="sortTable(4)">Year Built</th>
+                    <th onclick="sortTable(4)">Year Opened</th>
                     <th onclick="sortTable(5)">Capacity</th>
                     <th onclick="sortTable(6)">Home Team</th>
                     <th onclick="sortTable(7)">Interesting Fact</th>
