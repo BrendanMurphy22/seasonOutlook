@@ -14,7 +14,7 @@ class SeasonController {
         params.max = Math.min(max ?: 10, 100)
         respond Season.list(params), model:[seasonCount: Season.count()]
     }
-    @Secured('ROLE_ADMIN')
+    @Secured('ROLE_USER')
     def seasonOutlook() {
         def games = Game.findAll().toList()
         [games:games]

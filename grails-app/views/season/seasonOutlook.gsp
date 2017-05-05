@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="layout" content="main" />
     <g:set var="entityName" value="${message(code: 'season.label', default: 'Season')}" />
-    <title><g:message code="default.list.label" args="[entityName]" /></title>
+    <title>2017 Season Outlook</title>
 </head>
 <body>
 <div class="container">
