@@ -34,7 +34,6 @@ This is my final project for CSCI E-56, a New England Patriots 2017 season outlo
 - Contract end date
 - Total games played
 - Total games missed
-- A calculation predicting how many games will miss this season
 
 **4. Stadium**
 - Name

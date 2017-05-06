@@ -458,6 +458,34 @@ class BootStrap {
                 totalGamesMissed: 1,
                 team: patriots,
                 seasonsPlayed: 3).save()
+        Player malcolmButler  = new Player(
+                firstName:'Malcolm',
+                lastName:'Butler',
+                position:'CB',
+                universityAttended: 'West Alabama',
+                age: 27,
+                jerseyNum: 21,
+                underContract: true,
+                contractVal: 2000000,
+                contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
+                totalGamesPlayed: 48,
+                totalGamesMissed: 1,
+                team: patriots,
+                seasonsPlayed: 3).save()
+        Player gronk  = new Player(
+                firstName:'Rob',
+                lastName:'Gronkowski',
+                position:'TE',
+                universityAttended: 'Arizona',
+                age: 27,
+                jerseyNum: 87,
+                underContract: true,
+                contractVal: 2000000,
+                contractEnd: Date.parse('MM/dd/yyyy', '9/21/2018'),
+                totalGamesPlayed: 48,
+                totalGamesMissed: 1,
+                team: patriots,
+                seasonsPlayed: 3).save()
 
     }
 }

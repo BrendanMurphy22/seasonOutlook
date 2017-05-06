@@ -14,7 +14,7 @@ class SeasonController {
         params.max = Math.min(max ?: 10, 100)
         respond Season.list(params), model:[seasonCount: Season.count()]
     }
-    @Secured(['ROLE_ANONYMOUS','ROLE_USER'])
+    @Secured(['ROLE_ANONYMOUS','ROLE_USER','ROLE_ADMIN'])
     def seasonOutlook() {
         def games = Game.findAll().toList()
         games.each {winCalcService.setProbableWinner(it)}
