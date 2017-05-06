@@ -16,7 +16,7 @@
         <div class="col-sm-12 col-md-12">
             <div class="table-responsive">
                 <table class="table table-striped" id="myTable">
-                    <thead>
+                    <thead class="thead-default">
                     <th onclick="sortTable(0)">Game Date</th>
                     <th onclick="sortTable(1)">Away Team</th>
                     <th onclick="sortTable(2)">Home Team</th>
@@ -32,7 +32,12 @@
                         <td>${game.stadium.name}</td>
                         <td>${game.homeTeamWinRecord}</td>
                         <td>${game.awayTeamWinRecord}</td>
-                        <td>${game.probableWinner}</td></tr>
+                        <g:if test="${game.probableWinner == 'Patriots'}">
+                            <td class="blue"><strong>${game.probableWinner}</strong></td></tr>
+                        </g:if>
+                        <g:else>
+                            <td>${game.probableWinner}</td></tr>
+                        </g:else>
                     </g:each>
             </table>
             </div>

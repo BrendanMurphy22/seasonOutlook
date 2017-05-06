@@ -44,6 +44,7 @@
                     </g:each>
                 </table>
             </div>
+        <g:img dir="images" file="squad.jpg" class="img-fluid centered-image" alt="Responsive image"/>
         </div>
     </div>
 </div>

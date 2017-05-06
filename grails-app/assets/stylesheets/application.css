@@ -108,5 +108,15 @@ th
 fieldset {
     padding:5px;
 }
+.centered-image {
+    display: block;
+    margin: auto;
+}
+.blue {
+    color: blue;
+}
+.green {
+    color: green;
+}
 
 

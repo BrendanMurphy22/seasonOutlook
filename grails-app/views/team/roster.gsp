@@ -10,7 +10,8 @@
 <body>
 <div class="container">
     <header>
-        <h1 class="centered">Patriots 2017 Roster</h1>
+        <g:img dir="images" file="patriotsLogo.gif" class="img-fluid centered-image" alt="Responsive image"/>
+        <h1 class="centered">2017 Active Roster</h1>
     </header>
     <div class="row">
         <div class="col-sm-12 col-md-12">
@@ -33,14 +34,14 @@
                     </thead>
                     <g:each in="${team.players}" var="player">
                         <tr>
-                            <td>${player.firstName}</td>
-                            <td>${player.lastName}</td>
+                            <td><strong>${player.firstName}</strong></td>
+                            <td><strong>${player.lastName}</strong></td>
                             <td>${player.position}</td>
                             <td>${player.universityAttended}</td>
                             <td>${player.age}</td>
-                            <td>${player.jerseyNum}</td>
+                            <td class="blue">${player.jerseyNum}</td>
                             <td>${player.underContract}</td>
-                            <td><g:formatNumber number="${player.contractVal}" type="currency" currencyCode="USD" /></td>
+                            <td class="green"><g:formatNumber number="${player.contractVal}" type="currency" currencyCode="USD" /></td>
                             <td><g:formatDate format="MM/dd/yy" date="${player.contractEnd}"/></td>
                             <td>${player.totalGamesPlayed}</td>
                             <td>${player.totalGamesMissed}</td>
