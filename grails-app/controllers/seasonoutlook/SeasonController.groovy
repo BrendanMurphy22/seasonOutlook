@@ -7,7 +7,7 @@ import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
 class SeasonController {
-
+   WinCalcService winCalcService
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
@@ -17,6 +17,7 @@ class SeasonController {
     @Secured(['ROLE_ANONYMOUS','ROLE_USER'])
     def seasonOutlook() {
         def games = Game.findAll().toList()
+        games.each {winCalcService.setProbableWinner(it)}
         [games:games]
     }
 

@@ -32,7 +32,7 @@
                         <td>${game.stadium.name}</td>
                         <td>${game.homeTeamWinRecord}</td>
                         <td>${game.awayTeamWinRecord}</td>
-                        <td>${game.getProbableWinner()}</td></tr>
+                        <td>${game.probableWinner}</td></tr>
                     </g:each>
             </table>
             </div>

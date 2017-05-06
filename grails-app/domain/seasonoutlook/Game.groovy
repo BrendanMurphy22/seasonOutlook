@@ -7,19 +7,8 @@ class Game {
     Team awayTeam
     Integer homeTeamWinRecord
     Integer awayTeamWinRecord
+    String probableWinner
 
-    //this function may not be performing as expected, looking to find another solution
-    def getProbableWinner() {
-        Double d = Math.random()
-        if (d < homeTeamWinRecord.toFloat().round(2))
-        {
-            return homeTeam.name
-        }
-        else if (d < homeTeamWinRecord.toFloat().round(2))
-        {
-            return awayTeam.name
-        }
-    }
     static constraints = {
         date blank: false, nullable: false
         stadium blank: false, nullable: false
@@ -27,5 +16,6 @@ class Game {
         awayTeam blank: false, nullable: false
         homeTeamWinRecord blank: false, nullable: false
         awayTeamWinRecord blank: false, nullable: false
+        probableWinner blank: true, nullable: true
     }
 }
