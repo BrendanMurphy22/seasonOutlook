@@ -14,16 +14,16 @@ class PlayerController {
         params.max = Math.min(max ?: 10, 100)
         respond Player.list(params), model:[playerCount: Player.count()]
     }
-    @Secured('ROLE_ADMIN')
+    @Secured(['ROLE_ANONYMOUS','ROLE_USER'])
     def show(Player player) {
         respond player
     }
 
-    @Secured('ROLE_ADMIN')
+    @Secured(['ROLE_USER'])
     def create() {
         respond new Player(params)
     }
-    @Secured('ROLE_ADMIN')
+    @Secured(['ROLE_USER'])
     @Transactional
     def save(Player player) {
         if (player == null) {
@@ -48,11 +48,11 @@ class PlayerController {
             '*' { respond player, [status: CREATED] }
         }
     }
-    @Secured('ROLE_ADMIN')
+    @Secured(['ROLE_USER'])
     def edit(Player player) {
         respond player
     }
-    @Secured('ROLE_ADMIN')
+    @Secured(['ROLE_USER'])
     @Transactional
     def update(Player player) {
         if (player == null) {
@@ -77,7 +77,7 @@ class PlayerController {
             '*'{ respond player, [status: OK] }
         }
     }
-    @Secured('ROLE_ADMIN')
+    @Secured(['ROLE_USER'])
     @Transactional
     def delete(Player player) {
 

@@ -69,6 +69,18 @@ class BootStrap {
                 name: 'Raiders',
                 city: 'Oakland'
         ).save()
+        Team dolphins = new Team(
+                name: 'Dolphins',
+                city: 'Miami'
+        ).save()
+        Team bills = new Team(
+                name: 'Bills',
+                city: 'Buffalo'
+        ).save()
+        Team steelers = new Team(
+                name: 'Steelers',
+                city: 'Pittsburgh'
+        ).save()
 
 
         //stadiums
@@ -185,6 +197,26 @@ class BootStrap {
                 interestingFact: 'The Estadio Azteca was designed by architects Pedro Ramírez Vázquez and Rafael Mijares Alcérreca and broke ground in 1961. The inaugural match was between Club América and Torino F.C. on 29 May 1966, with a capacity for 107,494 spectators. The first goal was scored by Brazilian Arlindo Dos Santos and the second one by Brazilian José Alves "Zague"; later, the Italians tied the game, which ended in 2–2 draw. Mexican president Gustavo Díaz Ordaz made the initial kick and FIFA president Sir Stanley Rous was the witness.' + 'Estadio Azteca has also been used for musical performances throughout its history. Michael Jackson (5 sold-out shows in 1993),[14] U2 (in 2006 and 2011), Luis Miguel (in 2002), Elton John, Maná, Juan Gabriel, Gloria Estefan, Jaguares, Lenny Kravitz, *Nsync, Hanson, Ana Gabriel, and The Three Tenors all have become part of the stadium\'s main spectacle. The stadium has also been used for political events, including Mexican president Felipe Calderón\'s campaign closure in 2006, as well as religious events, such as Jehovah\'s Witnesses conventions, and the appearance of Pope John Paul II in 1999.',
                 homeTeam: raiders
         ).save()
+        Stadium newEra = new Stadium(
+                name: 'New Era Field',
+                location: 'Orchard Park, New York',
+                architect: 'HNTB',
+                surface : 'A-Turf Titan',
+                yearBuilt : Date.parse('yyyy', '1973'),
+                capacity: 71608,
+                interestingFact: 'The stadium is open-air, with a capacity of 71,870.[28] The stadium has never had a natural grass surface; AstroTurf was installed in the stadium upon its opening in 1973. The first renovation occurred in 1984 when the stadium\'s capacity was increased to 80,290 with the addition of 16 executive suites. Eight years later in 1992, 24 more executive suites were added. In 1994, major renovations were made to the stadium including the addition of the Red Zone and Goal Line clubs that are enclosed in glass and have 500 seats. These renovations also added 14 executive suites. A massive $9.1 million (inflation adjusted) 41.5 by 31.5 feet (12.6 by 9.6 m) Sony JumboTron video scoreboard was a major update in 1994 and was the largest in the U.S. at the time. In 1998, $57 million were spent to refit the stadium with larger seats and more luxury and club seating as a part of the Bills lease renewal with Erie County, New York.[25] This caused the seating capacity to be reduced to just under 74,000. In the 2003 offseason, the original style turf was replaced with a newer AstroTurf product, AstroTurf GameDay Grass (also known as AstroPlay). The lease agreement also stipulated Erie County would continue to upgrade the stadium; in the summer of 2007, a new High Definition Mitsubishi LED board measuring 88.8 by 32.5 feet (27.1 by 9.9 m) was installed and replaced the 13-year-old Sony Jumbotron. Over 1,000 ft of Mitsubishi Diamond Vision LED Ribbon Boards were also installed in the interior during that renovation.',
+                homeTeam: bills
+        ).save()
+        Stadium heinz = new Stadium(
+                name: 'Heinz Field',
+                location: 'Pittsburgh, Pennsylvania',
+                architect: 'Populous (then HOK Sport)',
+                surface : 'Kentucky bluegrass',
+                yearBuilt : Date.parse('yyyy', '2001'),
+                capacity: 68400,
+                interestingFact: 'TThe first event held at Heinz Field was a concert hosted by the band \'N Sync, on August 18, 2001. Coincidentally, they were also the last band to perform at the Steelers\' previous home, Three Rivers Stadium.[31][32] Prior to the Steelers regular season schedule, the team played a pre-season game against the Detroit Lions on August 25, 2001.[33] Pittsburgh won the stadium\'s unofficial opening game 20–7, with 57,829 spectators in attendance.[34] The first official football game played in the stadium was between the Pittsburgh Panthers and East Tennessee State, on September 1. The Panthers won the game 31–0, with quarterback David Priestley scoring the first touchdown on an 85-yard run. The Steelers were scheduled to open the regular season play at Heinz Field on September 16 against the Cleveland Browns; however, due to the September 11 attacks, all NFL games of the week were postponed,[34][36] thus moving the stadium\'s premiere to October 7, against the Cincinnati Bengals.[36] Prior to the game, a speech from US President George W. Bush, ordering attacks on Taliban-controlled Afghanistan, was shown live on the stadium\'s JumboTron.[37] The speech was met with much applause and support from the spectators in attendance.[36] Pittsburgh defeated the Bengals, 16–7. Steelers kicker Kris Brown scored the first NFL points in the stadium on a 26-yard field goal, and quarterback Kordell Stewart scored the first touchdown on an eight-yard run.',
+                homeTeam: steelers
+        ).save()
 
 
         //games
@@ -234,7 +266,7 @@ class BootStrap {
                 homeTeam: jets,
                 awayTeam: patriots,
                 awayTeamWinRecord: 10,
-                homeTeamWinRecord: 0
+                homeTeamWinRecord: 1
         ).save()
         Game g7 = new Game(
                 date: Date.parse("MM/dd/yy HH:mm", "10/22/17 08:30"),
@@ -253,7 +285,7 @@ class BootStrap {
                 homeTeamWinRecord: 5
         ).save()
         Game g9 = new Game(
-                date: Date.parse("MM/dd/yy HH:mm", "10/29/17 08:30"),
+                date: Date.parse("MM/dd/yy HH:mm", "11/12/17 08:30"),
                 stadium: gillete,
                 homeTeam: broncos,
                 awayTeam: patriots,
@@ -261,12 +293,60 @@ class BootStrap {
                 homeTeamWinRecord: 4
         ).save()
         Game g10 = new Game(
-                date: Date.parse("MM/dd/yy HH:mm", "10/29/17 08:30"),
+                date: Date.parse("MM/dd/yy HH:mm", "11/19/17 04:25"),
                 stadium: mexico,
                 homeTeam: raiders,
                 awayTeam: patriots,
                 awayTeamWinRecord: 9,
                 homeTeamWinRecord: 1
+        ).save()
+        Game g11 = new Game(
+                date: Date.parse("MM/dd/yy HH:mm", "11/29/17 01:00"),
+                stadium: gillete,
+                homeTeam: patriots,
+                awayTeam: dolphins,
+                awayTeamWinRecord: 1,
+                homeTeamWinRecord: 10
+        ).save()
+        Game g12 = new Game(
+                date: Date.parse("MM/dd/yy HH:mm", "12/03/17 01:00"),
+                stadium: newEra,
+                homeTeam: bills,
+                awayTeam: patriots,
+                awayTeamWinRecord: 1,
+                homeTeamWinRecord: 10
+        ).save()
+        Game g13 = new Game(
+                date: Date.parse("MM/dd/yy HH:mm", "12/11/17 08:30"),
+                stadium: gillete,
+                homeTeam: dolphins,
+                awayTeam: patriots,
+                awayTeamWinRecord: 1,
+                homeTeamWinRecord: 10
+        ).save()
+        Game g14 = new Game(
+                date: Date.parse("MM/dd/yy HH:mm", "12/17/17 04:25"),
+                stadium: heinz,
+                homeTeam: steelers,
+                awayTeam: patriots,
+                awayTeamWinRecord: 2,
+                homeTeamWinRecord: 10
+        ).save()
+        Game g15 = new Game(
+                date: Date.parse("MM/dd/yy HH:mm", "12/24/17 01:00"),
+                stadium: gillete,
+                homeTeam: patriots,
+                awayTeam: bills,
+                awayTeamWinRecord: 1,
+                homeTeamWinRecord: 10
+        ).save()
+        Game g16 = new Game(
+                date: Date.parse("MM/dd/yy HH:mm", "12/31/17 01:00"),
+                stadium: newEra,
+                homeTeam: patriots,
+                awayTeam: jets,
+                awayTeamWinRecord: 1,
+                homeTeamWinRecord: 10
         ).save()
 
         //season
@@ -276,7 +356,9 @@ class BootStrap {
                 endDate: Date.parse("MM/dd/yyyy", "12/31/2017"),
         ).save()
         season.addToGames(g1).addToGames(g2).addToGames(g3).addToGames(g4).addToGames(g5).addToGames(g6)
-                .addToGames(g7).addToGames(g8).addToGames(g9).addToGames(g10)
+                .addToGames(g7).addToGames(g8).addToGames(g9).addToGames(g10).addToGames(g11).addToGames(g12)
+                .addToGames(g13).addToGames(g14).addToGames(g15).addToGames(g16)
+
 
         //players
         Player ryanAllen = new Player(

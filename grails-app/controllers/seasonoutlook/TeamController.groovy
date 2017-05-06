@@ -14,7 +14,7 @@ class TeamController {
         params.max = Math.min(max ?: 10, 100)
         respond Team.list(params), model:[teamCount: Team.count()]
     }
-    @Secured('ROLE_USER')
+    @Secured(['ROLE_ANONYMOUS','ROLE_USER'])
     def roster(Team team) {
         respond team
     }
