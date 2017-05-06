@@ -33,7 +33,7 @@
                     <f:all bean="player"/>
                 </fieldset>
                 <fieldset>
-                    <button class="btn btn-info" type="submit">Update</button>
+                    <button class="btn btn-info" id="submitButton" type="submit">Update</button>
                 </fieldset>
             </g:form>
         </div>
