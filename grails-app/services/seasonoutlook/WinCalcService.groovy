@@ -11,11 +11,11 @@ class WinCalcService {
         Double d = Math.random()
         if (d < game.homeTeamWinRecord.toFloat().round(2))
         {
-            game.probableWinner = game.homeTeam.name
+            game.probableWinner = game.awayTeam.name
         }
         else if (d <game.awayTeamWinRecord.toFloat().round(2))
         {
-            game.probableWinner = game.awayTeam.name
+            game.probableWinner = game.homeTeam.name
         }
     }
 }
